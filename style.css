@@ -116,16 +116,18 @@ nav ul li a:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   color: #000000;
   font-size: 1rem;
-  position: relative; /* Ensure the close button is positioned relative to this */
+  position: relative; /* This makes the close button position relative to the modal */
 }
 
-
+/* Mobile adjustments for modal content */
 @media (max-width: 768px) {
   .modal-content {
-    padding: 1rem;
-    width: 90%;
+    padding: 1rem; /* Reduce padding for smaller screens */
+    width: 90%; /* Make the modal fit better on mobile */
+    max-height: 80vh; /* Maintain a manageable height */
   }
 }
+
 
 .modal {
   display: none;
@@ -152,17 +154,26 @@ nav ul li a:hover {
 .close {
   color: #333;
   position: absolute; /* Position the close button absolutely within the modal */
-  top: 10px; /* Adjust to place it inside the modal content */
-  right: 20px; /* Align it to the right inside the modal */
-  font-size: 1.5rem;
+  top: 10px; /* Adjust top distance */
+  right: 20px; /* Adjust right distance */
+  font-size: 1.5rem; /* Default size for desktop */
   font-weight: bold;
   cursor: pointer;
-  z-index: 10; /* Ensure the close button is above other elements */
+  z-index: 10; /* Ensure the close button stays above all other content */
 }
 
 .close:hover,
 .close:focus {
   color: red;
+}
+
+/* Media Query for Small Screens (Mobile) */
+@media (max-width: 768px) {
+  .close {
+    font-size: 1.2rem; /* Smaller size for mobile */
+    top: 5px; /* Adjust top position for mobile */
+    right: 10px; /* Adjust right position for mobile */
+  }
 }
 
 
