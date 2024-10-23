@@ -116,7 +116,9 @@ nav ul li a:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   color: #000000;
   font-size: 1rem;
+  position: relative; /* Ensure the close button is positioned relative to this */
 }
+
 
 @media (max-width: 768px) {
   .modal-content {
@@ -149,18 +151,20 @@ nav ul li a:hover {
 
 .close {
   color: #333;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: absolute; /* Position the close button absolutely within the modal */
+  top: 10px; /* Adjust to place it inside the modal content */
+  right: 20px; /* Align it to the right inside the modal */
   font-size: 1.5rem;
   font-weight: bold;
+  cursor: pointer;
+  z-index: 10; /* Ensure the close button is above other elements */
 }
 
 .close:hover,
 .close:focus {
   color: red;
-  cursor: pointer;
 }
+
 
 /* Footer */
 footer {
