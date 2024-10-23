@@ -503,3 +503,114 @@ footer {
   transition: transform 0.3s ease;
 }
 
+/* Base styles for mobile first approach */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Responsive Header */
+header {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 2rem 1rem; /* Reduced padding for mobile */
+  text-align: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 120px; /* Smaller profile image on mobile */
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+h1 {
+  font-size: 1.8rem; /* Smaller text size on mobile */
+  margin-bottom: 0.5rem;
+  color: #f0f0f0;
+}
+
+p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Responsive Navigation */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap for smaller screens */
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0.5rem; /* Add some space between navigation items */
+}
+
+nav ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1rem; /* Adjust font size for mobile */
+  font-weight: bold;
+}
+
+/* Adjust modal sizes for smaller screens */
+.modal-content {
+  width: 90%;
+  max-width: 100%;
+  padding: 1rem;
+  max-height: 80vh;
+  margin: 10% auto;
+}
+
+/* Media Query for larger screens */
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 4rem 1rem;
+  }
+  
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  nav ul li a {
+    font-size: 1.1rem;
+  }
+  
+  .modal-content {
+    width: 80%;
+    padding: 2rem;
+  }
+}
+
+.justified-text {
+  text-align: justify;
+}
+
+
+/* Responsive Footer */
+footer {
+  background-color: #1c1c1c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive layout for navigation and modals */
+nav ul {
+  flex-direction: row;
+}
+
