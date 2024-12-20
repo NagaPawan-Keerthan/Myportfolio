@@ -24,4 +24,16 @@ function openModal(modalId) {
       }
     });
   };
-  
+
+  function toggleChatbot() {
+    const chatbot = document.getElementById('chatbot-container');
+    const toggleButton = document.getElementById('chatbot-toggle');
+    
+    if (chatbot.style.display === 'none' || chatbot.style.display === '') {
+        chatbot.style.display = 'block';
+        toggleButton.textContent = '✖ Close Chat';
+    } else {
+        chatbot.style.display = 'none';
+        toggleButton.textContent = '🤖 Chat with Me';
+    }
+}

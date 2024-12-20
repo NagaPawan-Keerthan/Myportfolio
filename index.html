@@ -451,6 +451,35 @@
   </div>
 </div>
 
+<!-- Chatbot Container
+<div id="chatbot-container">
+  <button id="chatbot-toggle" onclick="toggleChatbot()">🤖 Chat with Me</button>
+  <div id="chatbot-window" style="display: none;">
+    <div id="chatbot-header">
+      <span>Interactive Chatbot</span>
+      <button id="chatbot-close" onclick="toggleChatbot()">&times;</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input">
+      <input type="text" id="chatbot-user-input" placeholder="Ask me anything..." />
+      <button onclick="askAI()">Send</button>
+    </div>
+  </div>
+</div> -->
+
+<!-- Chatbot Toggle Button -->
+<button id="chatbot-toggle" onclick="toggleChatbot()">🤖 Chat with Me</button>
+
+<!-- Chatbot Container -->
+<div id="chatbot-container">
+  <iframe 
+  width="350" 
+  height="430" 
+  allow="microphone;" 
+  src="https://console.dialogflow.com/api-client/demo/embedded/6ba60d42-cf0d-46c3-8cf7-9ac8426b0d69">
+</iframe>
+</div>
+
 
   <footer>
     <p>&copy; 2024 Naga Pawan Keerthan Ramaraju</p>
